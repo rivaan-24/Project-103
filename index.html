@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title> Family Recognizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+      <h2 id="title" class="btn btn-warning"><b><i>Member Recognition</i></b></h2>
+      <br>
+      <br>
+      <p id="instruction_text" style="font-size: 22px;"><b><i>This website is trained to identify the following family
+            members:</i></b></p>
+      <br>
+      <br>
+      <div id="family_members">
+        <hr>
+        <p id="member1"><b><i>My Father</i></b></p>
+        <hr>
+        <p id="member2"><b><i>My Mother</i></b></p>
+        <hr>
+        <p id="member3"><b><i>My Younger Brother (Arham)</i></b></p>
+        <hr>
+        <p id="member4"><b><i>Me (Rivaan)</i></b></p>
+        <hr>
+      </div>
+      <br>
+      <br>
+      <label id="webcam_text"><b><i>Webcam View - </i></b></label>
+      <div id="Cam_view"></div>
+      <br>
+      <br>
+      <div id="photo"></div>
+      <br>
+      <br>
+      <div id="buttons">
+        <button id="capture_button" onclick="capture_pic()" class="btn btn-info"><b><i>Capture Picture</i></b></button>
+        <br>
+        <br>
+        <button id="identify_button" onclick="identify_pic()" class="btn btn-success"><b><i>Identify
+              Picture</i></b></button>
+      </div>
+      <br>
+      <br>
+      <p id="member_text" style="font-size: 22px;"><b><i>Family Member:</i></b>
+        <span id="family_member"><b><i></i></b></span>
+      </p>
+      <p id="accuracy_text" style="font-size: 22px;"><b><i>Accuracy:</i></b>
+        <span id="member_accuracy"><b><i></i></b></span>
+      </p>
+    </center>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
